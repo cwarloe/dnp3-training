@@ -69,6 +69,8 @@ CB_TIE: OPEN
 
 ---
 
+---
+
 ## 🛡️ Enhanced SOC Training System (v2.0)
 
 Based on the research findings above, we've developed an enhanced training system that focuses on **realistic SOC analyst workflows** rather than command-line operations.
@@ -78,6 +80,20 @@ Based on the research findings above, we've developed an enhanced training syste
 python setup_training_system.py
 python src/enhanced_dnp3_soc_backend.py
 ```
+
+### Key Improvements
+- ✅ **Real training artifacts** - CSV logs, JSON events, IOC feeds
+- ✅ **Professional workflows** - Spreadsheet analysis, SIEM integration
+- ✅ **Attack scenarios** - 6 different attack types with intensity control
+- ✅ **Guided exercises** - Analysis worksheets with answer keys
+
+See [ENHANCED_SYSTEM.md](ENHANCED_SYSTEM.md) for detailed documentation.
+
+### Generated Artifacts
+- Traffic analysis: `training_outputs/analysis_reports/*.csv`
+- Security events: `training_outputs/security_logs/*.json`
+- Threat hunting: `training_outputs/ioc_feeds/*.json`
+- Training guides: `training_outputs/training_scenarios/*.md`
 
 ## License
 

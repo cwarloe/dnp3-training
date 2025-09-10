@@ -1,0 +1,42 @@
+# .github/workflows/setup-repo.yml
+# This workflow automatically creates the repo structure when you push the setup script
+
+name: Auto-Setup DNP3 Training System
+
+on:
+  push:
+    paths:
+      - 'create_dnp3_training_system.py'
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  setup-repo:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Run setup script
+      run: python create_dnp3_training_system.py
+      
+    - name: Extract generated files
+      run: |
+        unzip dnp3-training-system.zip
+        cp -r dnp3-training-system/* .
+        rm -rf dnp3-training-system/
+        rm dnp3-training-system.zip
+        rm create_dnp3_training_system.py
+        
+    - name: Commit generated files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git commit -m "Auto-generated DNP3 Training System structure" || exit 0
+        git push

@@ -67,6 +67,15 @@ CB_TIE: OPEN
 - Do not connect to real production equipment
 - Always use in isolated/sandbox environments
 
+---
+
+## 🛡️ Enhanced SOC Training System (v2.0)
+
+Based on the research findings above, we've developed an enhanced training system that focuses on **realistic SOC analyst workflows** rather than command-line operations.
+
+### Quick Start
+```bash
+
 ## License
 
 MIT License

@@ -1,0 +1,3 @@
+PyYAML>=6.0
+# pydnp3>=0.1.0  # Optional - only needed for real DNP3 hardware
+# For training/simulation mode, PyYAML is sufficient

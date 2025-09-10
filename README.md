@@ -75,6 +75,9 @@ Based on the research findings above, we've developed an enhanced training syste
 
 ### Quick Start
 ```bash
+python setup_training_system.py
+python src/enhanced_dnp3_soc_backend.py
+```
 
 ## License
 

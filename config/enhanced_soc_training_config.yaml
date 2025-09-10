@@ -1,0 +1,35 @@
+# Enhanced DNP3 SOC Training Configuration
+training_environment:
+  simulation_mode: true
+  log_level: "INFO"
+  
+# Network topology
+network_topology:
+  scada_networks:
+    - name: "Control Network"
+      ip_range: "10.50.1.0/24"
+      devices:
+        - ip: "10.50.1.100"
+          type: "dnp3_master"
+          description: "DNP3 SCADA Master"
+        - ip: "10.50.1.1"
+          type: "dnp3_rtu"
+          description: "Substation RTU #1"
+
+# Attack scenarios
+attack_scenarios:
+  unauthorized_control:
+    description: "Unauthorized CROB commands"
+    severity: "CRITICAL"
+  replay_attack:
+    description: "Replaying captured commands"
+    severity: "HIGH"
+  protocol_fuzzing:
+    description: "Malformed DNP3 packets"
+    severity: "MEDIUM"
+  timing_attack:
+    description: "Operations during unusual hours"
+    severity: "HIGH"
+  credential_stuffing:
+    description: "Multiple authentication attempts"
+    severity: "HIGH"

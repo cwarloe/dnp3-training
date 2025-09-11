@@ -1,0 +1,3 @@
+# Traffic Generator Requirements
+PyYAML>=6.0
+# No other dependencies needed - uses Python standard library

@@ -1,0 +1,20 @@
+# DNP3 Traffic Generator Configuration
+
+network:
+  master_ip: "192.168.1.100"      # SCADA Master IP
+  rtu_ip: "192.168.1.10"          # RTU/Outstation IP
+  dnp3_port: 20000               # DNP3 TCP port
+
+timing:
+  polling_interval: 5             # Base polling interval (seconds)
+  integrity_poll_interval: 300    # Full data poll every 5 minutes
+  event_poll_interval: 2          # Event check every 2 seconds
+
+devices:
+  master_address: 100             # DNP3 master station address
+  rtu_address: 1                  # DNP3 RTU address
+
+simulation:
+  generate_commands: true         # Generate CROB commands
+  command_probability: 0.1        # 10% chance per cycle
+  realistic_timing: true          # Use realistic intervals

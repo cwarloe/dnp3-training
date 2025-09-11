@@ -98,3 +98,36 @@ See [ENHANCED_SYSTEM.md](ENHANCED_SYSTEM.md) for detailed documentation.
 ## License
 
 MIT License
+
+
+---
+
+## 🚀 NEW: Network Traffic Generator
+
+### Legitimate DNP3 Packet Generation
+For network sensor capture and SOC analyst training:
+
+```bash
+# Quick start
+cd traffic_generator
+python3 dnp3_traffic_generator.py
+
+# Capture traffic
+sudo tcpdump -i eth0 -w dnp3_capture.pcap port 20000
+```
+
+**Perfect for:**
+- 🛡️ SOC analyst training on OT protocols
+- 📊 Network sensor testing and validation  
+- 🔍 Protocol analysis and research
+- 🏫 Educational demonstrations
+
+**Key Features:**
+- ✅ Real TCP/IP packets with DNP3 payload
+- ✅ Raspberry Pi optimized
+- ✅ YAML configuration
+- ✅ Network sensor compatible
+- ✅ No compilation required
+
+See `traffic_generator/README.md` for detailed setup instructions.
+

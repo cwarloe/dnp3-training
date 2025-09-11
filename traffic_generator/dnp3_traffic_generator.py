@@ -11,6 +11,7 @@ import time
 import threading
 import yaml
 import random
+import os
 from datetime import datetime
 
 class DNP3Protocol:
